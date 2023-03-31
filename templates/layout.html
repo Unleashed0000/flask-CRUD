@@ -17,8 +17,21 @@
  <body>
 
     <div class="wrapper"> 
-    {% block menu %}
 
+    {% block menu %}
+        <header class="header">
+
+            <ul class="main_menu">
+                <li><a href="#"><p>main</p></a></li>
+                <li><a href="#"><p>blog</p></a></li>
+                <li><a href="#"><p>register</p></a></li>
+                <li><a href="#"><p>login</p></a></li>
+                <li><a href="#"><p>account</p></a></li>
+                <li><a href="#"><p>create</p></a></li>
+                <li><a href="#"><p>logout</p></a></li>
+            </ul>
+
+        </header>
     {% endblock menu %}
 
     {% block content %}
@@ -27,11 +40,21 @@
 
     {% block mainpage %}
 
+        <div class="content">
+
+                
+        </div>
+
     {% endblock mainpage %}
 
     {% block footer %} 
 
+        <div class="footer">
+            &#169; Filinov Nikolay 2023
+        </div>
+
     {% endblock footer %}
+
     </div>
 
  </body>
