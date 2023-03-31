@@ -1,6 +1,10 @@
 version: "3.9"
 services:
-  web:
-    build: .
-    
-  postgreeDB:
+  postgre:
+    container_name: postrge
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_USER=admin
+    image: postgres:15.2

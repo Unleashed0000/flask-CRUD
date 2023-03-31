@@ -20,12 +20,21 @@ html, body {
     height: 100%;
 }
 
+/* LOGO */
+
+.logo{
+    float: left;
+    margin-left: 40px;
+    width: 200px;
+    margin-top: 20px
+}
+
 /* MAIN MENU */
 
 .header{
     height: 140px;
     outline: 1px red solid;
-    background-image: linear-gradient(#e66465, #9198e5);
+    background-image: linear-gradient(#000C56, #9198e5);
 }
 
 .main_menu{
@@ -36,8 +45,7 @@ html, body {
 
 .main_menu a{
     text-decoration: none;
-    color: darkslategray;
-    font-weight: 400;
+    color: rgb(3, 61, 61);
 }
 
 .main_menu li{
@@ -45,8 +53,9 @@ html, body {
     margin-right: 10px;
     width: 140px;
     margin-top: 5%;
-    box-shadow: 10px 10px 10px grey;
+    box-shadow: 10px 10px 10px rgb(52, 52, 52);
     font-family: monospace;
+    font-weight: 800;
     border-radius: 100px;
     text-align: center;
 }
@@ -57,7 +66,7 @@ html, body {
 }
 
 .main_menu p{
-    font-size: 18px;
+    font-size: 20px;
 }
 
 /* CONTENT */
@@ -66,6 +75,19 @@ html, body {
     width: 60%;
     margin: 100px auto 0;
     flex: 1 0 auto;
+}
+
+/* MAIN PAGE */
+
+.info{
+    display: flex;
+    width: 80%;
+    outline: 2px red solid;
+    margin: 80px auto 0;
+    box-shadow: -5px 15px 10px rebeccapurple;
+    align-items: center;
+    border-radius: 200px;
+    font-family: monospace;
 }
 
 /* FOOTER */
