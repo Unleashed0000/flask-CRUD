@@ -5,7 +5,6 @@ h1{
 }
 
 .wrapper{
-    outline: 1px rgb(0, 0, 0) solid;
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -83,7 +82,7 @@ html, body {
     display: flex;
     width: 80%;
     outline: 2px rgb(0, 0, 0) solid;
-    margin: 80px auto 0;
+    margin: 60px auto 20px;
     box-shadow: 0px 10px 10px rebeccapurple;
     align-items: center;
     border-radius: 5px;
@@ -100,6 +99,21 @@ html, body {
     display: flex;
 }
 
+/* CREATE */
+
+.form-control{
+    display: flex;
+    width: 75vw;
+    border-radius: 5px;
+}
+
+.btn.btn-primary{
+    font-family: monospace;
+    font-weight: 800;
+    align-items: center;
+    border-radius: 5px;
+}
+
 /* FOOTER */
 
 .footer{
@@ -112,4 +126,5 @@ html, body {
     height: 100px;
     font-size: 15px;
     font-family: monospace;
+    margin-top: auto;
 }
