@@ -8,4 +8,4 @@ if __name__ == "__main__":
             db.create_all()
         except:
             print('БД не включена')
-    app.run(port=80)
+    app.run(port=80, host='0.0.0.0')
