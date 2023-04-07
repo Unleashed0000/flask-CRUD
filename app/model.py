@@ -13,7 +13,7 @@ class User(db.Model):
 class Articles(db.Model):
     __tablename__ = 'articles'
     id = db.Column(db.Integer, primary_key=True)
-    article_name = db.Column(db.String(80))
+    article_name = db.Column(db.String(400))
     article_text = db.Column(db.Text)
 
     def __repr__(self):

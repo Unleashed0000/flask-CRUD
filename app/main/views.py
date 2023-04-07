@@ -8,7 +8,7 @@ def index():
     try:
         data = db.session.query(Articles).order_by(Articles.id.asc()).all()
     except:
-        print('не удалось считать данные')
+        print('read error')
     return render_template('index.html', title='lr2', data=data)
 
 @main.route('/update', methods=['POST'])
@@ -24,7 +24,7 @@ def update_data():
             db.session.commit()
         except:
             db.session.rollback()
-            print('ошибка обновления в бд')
+            print('update error')
     return redirect('/')
 
 @main.route('/delete', methods=['POST'])
@@ -37,7 +37,7 @@ def delete_data():
             db.session.commit()
         except:
             db.session.rollback()
-            print('ошибка удаления в БД')
+            print('delete error')
     return redirect('/')
 
 @main.route('/create', methods=['GET'])
@@ -52,11 +52,10 @@ def create_article():
     2) puts in db'''
     if request.form['text1'] and request.form['text2']:
         try:
-            print(request.form['text1'], request.form['text2'])
             article = Articles(article_name=request.form['text1'], article_text=request.form['text2'])
             db.session.add(article)
             db.session.commit()
         except:
-            print('error')
+            print('create error')
             db.session.rollback()
     return render_template('create.html')
