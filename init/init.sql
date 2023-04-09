@@ -1,3 +1,3 @@
-CREATE TABLE IF NOT EXISTS postgres_prod ();
-CREATE TABLE IF NOT EXISTS postgres_new ();
-CREATE TABLE IF NOT EXISTS postgres_test ();
+CREATE DATABASE IF NOT EXISTS postgres_prod;
+CREATE DATABASE IF NOT EXISTS postgres_new;
+CREATE DATABASE IF NOT EXISTS postgres_test;
