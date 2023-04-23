@@ -3,4 +3,4 @@
 ### How to run through docker-compose.yaml:
 In cmd or powershell:<br>
 
-docker-compose up --build
+<pre>docker-compose up --build</pre>
