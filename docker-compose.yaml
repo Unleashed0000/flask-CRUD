@@ -4,6 +4,8 @@ services:
     build: .
     ports:
       - "80:80"
+    environment:
+      - CONFIG=development
     depends_on:
       - postgre
   postgre:

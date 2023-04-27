@@ -1,7 +1,8 @@
 from app import create_app, db
 import time 
+from os import environ
 
-app = create_app('development') #'default', 'development', 'testing', 'production'
+app = create_app(environ.get('CONFIG'))
 
 if __name__ == "__main__":
     time.sleep(5) 
