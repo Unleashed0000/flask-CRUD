@@ -20,5 +20,35 @@ services:
       - db-data:/var/lib/postgres
       - ./init:/docker-entrypoint-initdb.d      
 
+ # the Prometheus server
+  prometheus:
+    container_name: prometheus
+    image: prom/prometheus:v2.2.1
+    volumes:
+      - ./prometheus/config.yml:/etc/prometheus/prometheus.yml
+    ports:
+      - 9090:9090
+    depends_on:
+      - web
+
+  # Grafana for visualization
+  grafana:
+    image: grafana/grafana:5.1.0
+    volumes:
+      - ./grafana/config.ini:/etc/grafana/grafana.ini
+      - ./grafana/datasource.yaml:/etc/grafana/provisioning/datasources/default.yaml
+      - ./grafana/dashboard.yaml:/etc/grafana/provisioning/dashboards/default.yaml
+      - ./grafana/dashboards:/var/lib/grafana/dashboards
+    ports:
+      - 3000:3000
+    depends_on:
+      - prometheus
+
+# чтобы контейнеры видели друг друга (to see prometheus web:80)
+networks:
+  network1:
+    name: my-pre-existing-network
+    external: true
+
 volumes:
   db-data:

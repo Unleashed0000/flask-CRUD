@@ -1,7 +1,11 @@
 from app import db
+from app import metrics
 from app.model import Articles
 from flask import render_template, request, redirect
 from . import main
+
+# static information as metric
+metrics.info('app_info', 'Application info', version='1.0.3')
 
 @main.route('/', methods=['GET'])
 def index():
