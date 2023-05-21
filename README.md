@@ -12,3 +12,5 @@ Config options. <br>
 environment:
     - CONFIG=development # 'default', 'development', 'testing', 'production'
 </pre>
+
+Open http://localhost:3000/d/_eX4mpl3 in your browser to see the dashboard.
