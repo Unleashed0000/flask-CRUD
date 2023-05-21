@@ -2,13 +2,13 @@
 
 ### How to run through docker-compose.yaml:
 In cmd or powershell:<br>
-<pre> docker-compose up --build </pre> <br>
+<code> docker-compose up --build </code> <br>
 
 Against unused images in docker. <br>
 <code> docker-compose up --build --force-recreate </code> <br>
 
 Config options. <br>
-<code>
-environment:<br>
+<pre>
+environment:
     - CONFIG=development # 'default', 'development', 'testing', 'production'
-</code>
+</pre>
